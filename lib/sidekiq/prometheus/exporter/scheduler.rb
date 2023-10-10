@@ -18,6 +18,7 @@ module Sidekiq
 
         def initialize
           @stats = Stats.new(recurring_jobs.count, enabled_recurring_jobs.count, last_runs)
+          @prefix = ENV['METRICS_PREFIX'] || ''
         end
 
         def to_s
