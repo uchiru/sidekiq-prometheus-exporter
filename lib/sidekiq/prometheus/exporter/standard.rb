@@ -22,7 +22,7 @@ module Sidekiq
           @queues_stats = queues_stats
           @workers_stats = workers_stats
           @max_processing_times = max_processing_times
-          @prefix = ENV['METRICS_PREFIX'] || ''
+          @prefix = PREFIX
         end
 
         def to_s
