@@ -15,7 +15,7 @@ module Sidekiq
 
         def initialize
           @cron_jobs_count = Sidekiq::Cron::Job.count
-          @prefix = ENV['METRICS_PREFIX'] || ''
+          @prefix = PREFIX
         end
 
         def to_s
