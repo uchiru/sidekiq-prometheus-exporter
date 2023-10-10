@@ -15,6 +15,7 @@ module Sidekiq
 
         def initialize
           @cron_jobs_count = Sidekiq::Cron::Job.count
+          @prefix = PREFIX
         end
 
         def to_s
