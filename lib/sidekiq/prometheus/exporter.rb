@@ -11,6 +11,7 @@ module Sidekiq
       REQUEST_METHOD = 'REQUEST_METHOD'.freeze
       NOT_FOUND_TEXT = 'Not Found'.freeze
       MOUNT_PATH = '/metrics'.freeze
+      PREFIX = ENV['METRICS_PREFIX'] || ''
       # rubocop:disable Style/MutableConstant
       HEADERS = {Rack::CONTENT_TYPE => 'text/plain; version=0.0.4', Rack::CACHE_CONTROL => 'no-cache'}
       # rubocop:enable Style/MutableConstant
